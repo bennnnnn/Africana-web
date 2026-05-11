@@ -9,9 +9,13 @@
   <meta property="og:description" content="Meet Africans and the diaspora worldwide. Real people. Genuine connections." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://joinafricana.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
   <script>
-    // Hand off OAuth redirects back to the app
     (function () {
       var combined = window.location.search + window.location.hash;
       if (combined.includes('access_token') || combined.includes('type=recovery')) {
@@ -22,41 +26,110 @@
 </head>
 <body>
 
+  <!-- NAV -->
   <nav>
     <a class="nav-logo" href="/">Africana</a>
     <div class="nav-links">
       <a href="#features">Features</a>
+      <a href="#members">Members</a>
       <a href="#how">How it works</a>
       <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
     </div>
     <a class="nav-cta" href="#download">Get the app</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <h1>Where African<br/><span>Hearts Connect</span></h1>
-      <p>Meet Africans and the diaspora worldwide.<br/>Real people. Genuine connections.</p>
-      <div class="hero-badges" id="download">
-        <a class="btn-store btn-ios" id="ios-link"
-           href="https://apps.apple.com/app/africana/id0000000000">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-          </svg>
-          Download on the App Store
-        </a>
-        <a class="btn-store btn-android" id="android-link"
-           href="https://play.google.com/store/apps/details?id=com.africana.dating">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M3.18 23.76c.3.17.64.22.99.15l12.5-7.21-2.64-2.64-10.85 9.7zm-1.76-18.6C1.16 5.5 1 5.88 1 6.3v11.4c0 .42.16.8.42 1.14l.07.07 6.39-6.39v-.15L1.42 5.16zm15.37 8.13l-2.13-2.13-2.13 2.13 2.13 2.13 2.13-2.13zm-9.24-9.95L20.05 10.6c.63.36.63.95 0 1.31l-2.64 1.52-2.65-2.65 2.65-2.65-9.5-5.49c-.35-.2-.7-.2-.99-.09l10.85 9.7-10.42 6.01z"/>
-          </svg>
-          Get it on Google Play
-        </a>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-pill">✨ 50,000+ members worldwide</div>
+        <h1>Find your <em>African</em><br/>love story</h1>
+        <p>Connect with Africans and the diaspora who share your roots, values, and vision for life. Real people. Genuine connections.</p>
+        <div class="hero-badges" id="download">
+          <a class="btn-store btn-ios" id="ios-link" href="https://apps.apple.com/app/africana/id0000000000">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <a class="btn-store btn-android" id="android-link" href="https://play.google.com/store/apps/details?id=com.africana.dating">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3.18 23.76c.3.17.64.22.99.15l12.5-7.21-2.64-2.64-10.85 9.7zm-1.76-18.6C1.16 5.5 1 5.88 1 6.3v11.4c0 .42.16.8.42 1.14l.07.07 6.39-6.39v-.15L1.42 5.16zm15.37 8.13l-2.13-2.13-2.13 2.13 2.13 2.13 2.13-2.13zm-9.24-9.95L20.05 10.6c.63.36.63.95 0 1.31l-2.64 1.52-2.65-2.65 2.65-2.65-9.5-5.49c-.35-.2-.7-.2-.99-.09l10.85 9.7-10.42 6.01z"/>
+            </svg>
+            <span><small>Get it on</small>Google Play</span>
+          </a>
+        </div>
+        <p class="hero-note">Free to download &nbsp;·&nbsp; iOS &amp; Android</p>
       </div>
-      <p class="hero-note">Free to download · iOS &amp; Android</p>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-visual">
+          <div class="hero-blob"></div>
+          <div class="hero-blob-2"></div>
+
+          <div class="pcard pcard-1">
+            <div class="pcard-photo" style="background: linear-gradient(135deg, #f59e0b, #d97706)">
+              <span>A</span>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-name">Amara, 26</div>
+              <div class="pcard-loc">Lagos, Nigeria 🇳🇬</div>
+              <div class="pcard-match-tag">❤️ Just matched</div>
+            </div>
+          </div>
+
+          <div class="pcard pcard-2">
+            <div class="pcard-photo" style="background: linear-gradient(135deg, #3b82f6, #0891b2)">
+              <span>K</span>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-name">Kwame, 30</div>
+              <div class="pcard-loc">London 🇬🇧</div>
+            </div>
+          </div>
+
+          <div class="pcard pcard-3">
+            <div class="pcard-photo" style="background: linear-gradient(135deg, #8b5cf6, #ec4899)">
+              <span>Z</span>
+            </div>
+            <div class="pcard-body">
+              <div class="pcard-name">Zara, 27</div>
+              <div class="pcard-loc">Nairobi 🇰🇪</div>
+            </div>
+          </div>
+
+          <div class="float-elem fe-1">💚</div>
+          <div class="float-elem fe-2">❤️</div>
+          <div class="float-elem fe-3">✨</div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat">
+        <strong>50,000+</strong>
+        <span>Members</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <strong>54</strong>
+        <span>Countries</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <strong>120+</strong>
+        <span>Languages</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <strong>10,000+</strong>
+        <span>Connections made</span>
+      </div>
+    </div>
+  </div>
 
   <!-- FEATURES -->
   <section class="features" id="features">
@@ -70,14 +143,89 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎯</div>
-        <h3>Filter by what matters</h3>
-        <p>Search by country, language, and values. Find someone who truly gets you, not just a generic match.</p>
+        <h3>Smart matching</h3>
+        <p>Filter by country of origin, language, religion, and values. Find someone who truly gets you, not just a generic match.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🛡️</div>
-        <h3>Safe &amp; authentic</h3>
-        <p>Privacy controls, blocking, and a community built on respect. Your safety comes first.</p>
+        <h3>Safe &amp; verified</h3>
+        <p>Photo verification, privacy controls, and a community built on respect. Your safety always comes first.</p>
       </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Voice &amp; video</h3>
+        <p>Go beyond text. Send voice notes, share photos, and hop on a video call with your matches.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎉</div>
+        <h3>Community events</h3>
+        <p>Join virtual and in-person African community events. Meet people beyond the app, IRL.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <h3>Africana Premium</h3>
+        <p>Unlimited likes, see who liked you, and boost your profile to stand out in your city.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERS SHOWCASE -->
+  <section class="members-section" id="members">
+    <p class="section-label">Our community</p>
+    <h2 class="section-title">Meet real members</h2>
+    <div class="members-grid">
+      <div class="member-card">
+        <div class="member-photo" style="background: linear-gradient(135deg, #f59e0b, #d97706)"><span>A</span></div>
+        <div class="member-name">Amara</div>
+        <div class="member-info">26 · Lagos, Nigeria 🇳🇬</div>
+        <div class="member-tags">
+          <span>Creative</span><span>Music</span><span>Travel</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-photo" style="background: linear-gradient(135deg, #3b82f6, #0891b2)"><span>K</span></div>
+        <div class="member-name">Kwame</div>
+        <div class="member-info">30 · London (from Ghana) 🇬🇭</div>
+        <div class="member-tags">
+          <span>Entrepreneur</span><span>Football</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-photo" style="background: linear-gradient(135deg, #8b5cf6, #ec4899)"><span>Z</span></div>
+        <div class="member-name">Zara</div>
+        <div class="member-info">27 · Nairobi, Kenya 🇰🇪</div>
+        <div class="member-tags">
+          <span>Lawyer</span><span>Hiking</span><span>Poetry</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-photo" style="background: linear-gradient(135deg, #f43f5e, #e11d48)"><span>N</span></div>
+        <div class="member-name">Nia</div>
+        <div class="member-info">25 · Atlanta, USA 🇺🇸</div>
+        <div class="member-tags">
+          <span>Teacher</span><span>Art</span><span>Afrobeats</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-photo" style="background: linear-gradient(135deg, #0E9F6E, #0a7a55)"><span>E</span></div>
+        <div class="member-name">Ekow</div>
+        <div class="member-info">31 · Accra, Ghana 🇬🇭</div>
+        <div class="member-tags">
+          <span>Doctor</span><span>Photography</span>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-photo" style="background: linear-gradient(135deg, #14b8a6, #0d9488)"><span>A</span></div>
+        <div class="member-name">Adaeze</div>
+        <div class="member-info">24 · Abuja, Nigeria 🇳🇬</div>
+        <div class="member-tags">
+          <span>Engineer</span><span>Books</span><span>Fashion</span>
+        </div>
+      </div>
+    </div>
+    <div class="members-cta">
+      <p>Thousands more profiles waiting — download the app to explore</p>
+      <a class="btn-primary" href="#download">Join Africana Free</a>
     </div>
   </section>
 
@@ -87,58 +235,148 @@
     <h2 class="section-title">How it works</h2>
     <div class="steps">
       <div class="step">
-        <div class="step-num">1</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
         <h3>Create your profile</h3>
-        <p>Add your photos, background, and what you're looking for.</p>
+        <p>Add your photos, background, and what you're looking for. Let your personality shine through.</p>
       </div>
+      <div class="step-connector" aria-hidden="true"></div>
       <div class="step">
-        <div class="step-num">2</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
         <h3>Discover members</h3>
-        <p>Browse profiles filtered by country, language, and preferences.</p>
+        <p>Browse profiles filtered by country, language, and the preferences that matter most to you.</p>
       </div>
+      <div class="step-connector" aria-hidden="true"></div>
       <div class="step">
-        <div class="step-num">3</div>
+        <div class="step-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
         <h3>Connect &amp; chat</h3>
-        <p>Like, match, and start a real conversation.</p>
+        <p>Match, send a message, and let the conversation grow into something real.</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <p class="section-label">Love stories</p>
+    <h2 class="section-title">Real connections, real love</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="quote-icon">&ldquo;</div>
+        <p class="quote-text">Africana connected me with my fiancé who grew up in the same region of Ghana as my grandmother. We never would have met otherwise. This app just gets us.</p>
+        <div class="quote-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706)">A</div>
+          <div>
+            <strong>Akosua M.</strong>
+            <span>Accra → New York 🇺🇸</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-icon">&ldquo;</div>
+        <p class="quote-text">Finally an app that truly understands our culture. I matched with the most incredible man from Lagos. We've been together 8 months and he's everything I prayed for.</p>
+        <div class="quote-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #f43f5e, #e11d48)">T</div>
+          <div>
+            <strong>Titi O.</strong>
+            <span>Lagos, Nigeria 🇳🇬</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-icon">&ldquo;</div>
+        <p class="quote-text">Met Zara on Africana 18 months ago. We're now planning our wedding in Nairobi. Thank you for building something that celebrates who we are.</p>
+        <div class="quote-author">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #3b82f6, #0891b2)">D</div>
+          <div>
+            <strong>David A.</strong>
+            <span>Nairobi, Kenya 🇰🇪</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
   <section class="cta-band">
-    <h2>Ready to meet your match?</h2>
-    <p>Download Africana free today.</p>
-    <div class="hero-badges">
-      <a class="btn-store btn-ios" href="https://apps.apple.com/app/africana/id0000000000">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        App Store
-      </a>
-      <a class="btn-store btn-android" href="https://play.google.com/store/apps/details?id=com.africana.dating">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.15l12.5-7.21-2.64-2.64-10.85 9.7zm-1.76-18.6C1.16 5.5 1 5.88 1 6.3v11.4c0 .42.16.8.42 1.14l.07.07 6.39-6.39v-.15L1.42 5.16zm15.37 8.13l-2.13-2.13-2.13 2.13 2.13 2.13 2.13-2.13zm-9.24-9.95L20.05 10.6c.63.36.63.95 0 1.31l-2.64 1.52-2.65-2.65 2.65-2.65-9.5-5.49c-.35-.2-.7-.2-.99-.09l10.85 9.7-10.42 6.01z"/></svg>
-        Google Play
-      </a>
+    <div class="cta-inner">
+      <h2>Ready to find your<br/><em>love story?</em></h2>
+      <p>Download Africana free. Join 50,000+ members already finding love.</p>
+      <div class="hero-badges">
+        <a class="btn-store btn-ios-dark" href="https://apps.apple.com/app/africana/id0000000000">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a class="btn-store btn-android-outline" href="https://play.google.com/store/apps/details?id=com.africana.dating">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.76c.3.17.64.22.99.15l12.5-7.21-2.64-2.64-10.85 9.7zm-1.76-18.6C1.16 5.5 1 5.88 1 6.3v11.4c0 .42.16.8.42 1.14l.07.07 6.39-6.39v-.15L1.42 5.16zm15.37 8.13l-2.13-2.13-2.13 2.13 2.13 2.13 2.13-2.13zm-9.24-9.95L20.05 10.6c.63.36.63.95 0 1.31l-2.64 1.52-2.65-2.65 2.65-2.65-9.5-5.49c-.35-.2-.7-.2-.99-.09l10.85 9.7-10.42 6.01z"/>
+          </svg>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <span class="footer-logo">Africana</span>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="mailto:support@africana.app">Contact</a>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">Africana</span>
+          <p>Where African hearts connect — across the continent and the diaspora.</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <strong>App</strong>
+            <a href="#features">Features</a>
+            <a href="#how">How it works</a>
+            <a href="#download">Download</a>
+          </div>
+          <div class="footer-col">
+            <strong>Company</strong>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:support@africana.app">Contact</a>
+          </div>
+        </div>
       </div>
-      <p class="footer-copy">© 2026 Africana. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p>© 2026 Africana. All rights reserved.</p>
+        <p>Made with ❤️ for the African community</p>
+      </div>
     </div>
   </footer>
 
   <script>
-    var ua = navigator.userAgent;
-    if (/android/i.test(ua)) {
+    if (/android/i.test(navigator.userAgent)) {
       var el = document.getElementById('android-link');
-      if (el) { el.style.background = '#fff'; el.style.color = '#0E9F6E'; el.style.border = 'none'; }
+      if (el) el.style.borderColor = 'var(--green)';
     }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) entry.target.classList.add('revealed');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.feature-card, .member-card, .testimonial-card, .step').forEach(function(el) {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
   </script>
 
 </body>
